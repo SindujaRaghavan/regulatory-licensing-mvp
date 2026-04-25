@@ -1,0 +1,151 @@
+{
+  "info": {
+    "name": "Regulatory Licensing MVP",
+    "_postman_id": "12345-licensing",
+    "description": "Includes Approve & Reject APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "1 Submit Application",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/applications",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"businessName\": \"ABC Food Pte Ltd\",\n  \"operatorName\": \"Sinduja\",\n  \"licenceType\": \"Food Shop Licence\",\n  \"applicationDetails\": \"Initial submission\",\n  \"documents\": []\n}"
+        }
+      }
+    },
+
+    {
+      "name": "2 Get Application - Operator",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1?role=OPERATOR",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1"],
+          "query": [{ "key": "role", "value": "OPERATOR" }]
+        }
+      }
+    },
+
+    {
+      "name": "3 Start Review",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/review/start",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "review", "start"]
+        }
+      }
+    },
+
+    {
+      "name": "4 Request Resubmission",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/review/request-resubmission",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "review", "request-resubmission"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"feedbacks\": [\n    {\n      \"section\": \"Address\",\n      \"comment\": \"Provide complete address\"\n    }\n  ]\n}"
+        }
+      }
+    },
+
+    {
+      "name": "5 Resubmit Application",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/resubmit",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "resubmit"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"businessName\": \"ABC Food Pte Ltd\",\n  \"operatorName\": \"Sinduja\",\n  \"licenceType\": \"Food Shop Licence\",\n  \"applicationDetails\": \"Updated application\",\n  \"documents\": []\n}"
+        }
+      }
+    },
+
+    {
+      "name": "6 Start Review Again",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/review/start",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "review", "start"]
+        }
+      }
+    },
+
+    {
+      "name": "7 Approve Application",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/approve",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "approve"]
+        }
+      }
+    },
+
+    {
+      "name": "8 Reject Application",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1/reject",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1", "reject"]
+        }
+      }
+    },
+
+    {
+      "name": "9 Get Application - Officer",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/applications/1?role=OFFICER",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "applications", "1"],
+          "query": [{ "key": "role", "value": "OFFICER" }]
+        }
+      }
+    }
+
+  ]
+}
