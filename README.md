@@ -194,7 +194,13 @@ I discarded overly complex suggestions such as microservices and external file s
 
 ## Testing
 
-Basic unit and controller tests are included to validate status transitions and API behavior.
+Basic tests are implemented to validate key application flows and status transitions.
+
+Test coverage includes:
+- Application submission
+- Status transition validation (review, resubmission, approval, rejection)
+- Controller endpoint validation using MockMvc
+Postman collection is also provided to test end-to-end API flows manually.
 
 ## What I Would Do Next
 
