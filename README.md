@@ -200,7 +200,7 @@ Test coverage includes:
 - Application submission
 - Status transition validation (review, resubmission, approval, rejection)
 - Controller endpoint validation using MockMvc
-Postman collection is also provided to test end-to-end API flows manually.
+- Postman collection is also provided to test end-to-end API flows manually.
 
 ## What I Would Do Next
 
