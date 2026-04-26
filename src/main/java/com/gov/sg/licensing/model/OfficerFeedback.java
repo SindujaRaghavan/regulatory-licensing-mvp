@@ -29,16 +29,40 @@ public class OfficerFeedback {
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    public Long getId() { return id; }
-    public Application getApplication() { return application; }
-    public void setApplication(Application application) { this.application = application; }
-    public String getSection() { return section; }
-    public void setSection(String section) { this.section = section; }
-    public String getComment() { return comment; }
-    public void setComment(String comment) { this.comment = comment; }
-    public boolean isResolved() { return resolved; }
-    public void setResolved(boolean resolved) { this.resolved = resolved; }
-    public Integer getRevisionNo() { return revisionNo; }
-    public void setRevisionNo(Integer revisionNo) { this.revisionNo = revisionNo; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
+    public Long getId() {
+        return id;
+    }
+    public Application getApplication() {
+        return application;
+    }
+    public void setApplication(Application application) {
+        this.application = application;
+    }
+    public String getSection() {
+        return section;
+    }
+    public void setSection(String section) {
+        this.section = section;
+    }
+    public String getComment() {
+        return comment;
+    }
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+    public boolean isResolved() {
+        return resolved;
+    }
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+    public Integer getRevisionNo() {
+        return revisionNo;
+    }
+    public void setRevisionNo(Integer revisionNo) {
+        this.revisionNo = revisionNo;
+    }
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 }

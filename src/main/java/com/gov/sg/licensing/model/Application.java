@@ -54,48 +54,63 @@ public class Application {
         return id;
     }
     public String getBusinessName() {
+
         return businessName;
     }
     public void setBusinessName(String businessName) {
+
         this.businessName = businessName;
     }
     public String getOperatorName() {
+
         return operatorName;
     }
     public void setOperatorName(String operatorName) {
+
         this.operatorName = operatorName;
     }
     public String getLicenceType() {
+
         return licenceType;
     }
     public void setLicenceType(String licenceType) {
+
         this.licenceType = licenceType;
     }
     public String getApplicationDetails() {
+
         return applicationDetails;
     }
     public void setApplicationDetails(String applicationDetails) {
+
         this.applicationDetails = applicationDetails;
     }
     public ApplicationStatus getStatus() {
+
         return status;
     }
     public void setStatus(ApplicationStatus status) {
+
         this.status = status;
     }
     public Integer getRevisionNo() {
+
         return revisionNo;
     }
     public void setRevisionNo(Integer revisionNo) {
+
         this.revisionNo = revisionNo;
     }
     public LocalDateTime getCreatedAt() {
+
         return createdAt;
     }
     public LocalDateTime getUpdatedAt() {
+
         return updatedAt;
     }
     public Set<ApplicationDocument> getDocuments() {
+
         return documents;
     }
     public Set<OfficerFeedback> getFeedbacks() {

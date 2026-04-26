@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex, HttpServletRequest request) {
         Map<String, String> errors = new HashMap<>();
         ex.getBindingResult().getFieldErrors().forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
-        return build(HttpStatus.BAD_REQUEST, "Validation failed", request, errors);
+        return build(HttpStatus.BAD_REQUEST, "Validation failed. Please check fieldErrors for details.", request, errors);
     }
 
     @ExceptionHandler(Exception.class)

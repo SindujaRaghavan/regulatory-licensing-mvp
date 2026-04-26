@@ -30,30 +30,38 @@ public class ApplicationDocument {
         return id;
     }
     public Application getApplication() {
+
         return application;
     }
     public void setApplication(Application application) {
+
         this.application = application;
     }
     public String getFileName() {
+
         return fileName;
     }
     public void setFileName(String fileName) {
+
         this.fileName = fileName;
     }
     public String getDocumentType() {
+
         return documentType;
     }
     public void setDocumentType(String documentType) {
+
         this.documentType = documentType;
     }
     public String getAiVerificationStatus() {
+
         return aiVerificationStatus;
     }
     public void setAiVerificationStatus(String aiVerificationStatus) {
         this.aiVerificationStatus = aiVerificationStatus;
     }
     public LocalDateTime getUploadedAt() {
+
         return uploadedAt;
     }
 }
