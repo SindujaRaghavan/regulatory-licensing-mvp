@@ -33,6 +33,7 @@ public class ApplicationService {
 
     @Transactional(readOnly = true)
     public ApplicationResponse get(Long id, UserRole role) {
+
         return mapper.toResponse(find(id), role);
     }
 
