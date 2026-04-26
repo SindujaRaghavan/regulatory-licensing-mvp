@@ -19,6 +19,21 @@ See `SCOPE.md` for scope decisions, assumptions, and deferred items.
 - Bean Validation
 - Swagger / springdoc-openapi
 
+## Prerequisites
+
+- Java 17
+- Maven 3.8+
+- Git
+
+## Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/SindujaRaghavan/regulatory-licensing-mvp.git
+cd regulatory-licensing-mvp
+```
+
 ## How to Run
 
 ```bash
@@ -116,7 +131,29 @@ curl -X POST http://localhost:8080/api/applications/1/resubmit \
     ]
   }'
 ```
+### 6. Officer starts review again (after resubmission)
 
+```bash
+curl -X POST http://localhost:8080/api/applications/1/review/start
+```
+
+### 7. Officer approves the application
+
+```bash
+curl -X POST http://localhost:8080/api/applications/1/approve
+```
+### 8. Officer rejects the application (alternate flow)
+
+```bash
+curl -X POST http://localhost:8080/api/applications/1/reject
+```
+### 9. View the application status
+
+
+```bash
+curl "http://localhost:8080/api/applications/1?role=OFFICER"
+
+```
 ## Status Mapping
 
 The API returns both:
